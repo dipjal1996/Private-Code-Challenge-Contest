@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src = "{{url_for('static' , filename = 'contest_page2.js')}}">
+		</script>
+	</head>
+<body>
+	<h1> Welcome User, {{user}} </h1>
+	<hr>
+	<br>
+	<h3> Please Fill the Contest Details. </h3>
+	<hr>
+	<br>
+	<form method = "POST" action = "/create">
+		<table>
+		<tr><td><p>Contest Name </p></td><td><input type = "name" name = "contest_name"></td></tr>
+		<tr><td>Contest Id </td><td><input type = "number" name = "contest_id"></td></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>	
+		<tr><td>Number of Participants </td><td> 
+		<select id = "select" name = "dropdown" onchange = "myFunction()">
+			<option selected = "selected" value = 2>2</option>
+			<option value = 3>3</option>
+			<option value = 4>4</option>
+			<option value = 5>5</option>
+
+		</select> </p>
+		</td></tr>
+		</table>
+		<br>
+		User 1 <input id = "user_1" name = "user_1" type = "text" readonly value = {{user}}>
+		<br>
+		<p id = "demo"> User 2<input id = "user_2" name = "user_2" type = "text"> </p>
+	<input type = "submit" value = "Create">
+	</form>
+	<hr>
+</body>
+</html>
